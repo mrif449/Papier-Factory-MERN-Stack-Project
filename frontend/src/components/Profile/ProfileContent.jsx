@@ -450,7 +450,7 @@ const PaymentMethod = () => {
             alt=""
           />
           <h5 className="pl-5 font-[600] text-[12px] 800px:text-[unset]">
-            Shahriar Sajeeb
+            Rahadul Islam
           </h5>
         </div>
         <div className="pl-8 flex items-center">

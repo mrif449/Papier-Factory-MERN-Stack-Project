@@ -8,7 +8,7 @@
     "dev": "nodemon backend/server.js",
     "start": "node backend/server.js"
   },
-  "author": "shahriar Sajeeb",
+  "author": "Rahadul Islam",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",

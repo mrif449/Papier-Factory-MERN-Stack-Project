@@ -8,25 +8,27 @@ const Hero = () => {
       className={`relative min-h-[70vh] 800px:min-h-[80vh] w-full bg-no-repeat ${styles.noramlFlex}`}
       style={{
         backgroundImage:
-          "url(https://themes.rslahmed.dev/rafcart/assets/images/banner-2.jpg)",
+          "url(https://cms.cloudinary.vpsvc.com/images/c_scale,dpr_auto,f_auto,q_auto:good,w_1920/legacy_dam/en-us/S001525875/MXP6944-stationery-hero-full-001?cb=41cb9d0b5567420aef65a030be1e6885864434d5)",
       }}
     >
       <div className={`${styles.section} w-[90%] 800px:w-[60%]`}>
         <h1
-          className={`text-[35px] leading-[1.2] 800px:text-[60px] text-[#3d3a3a] font-[600] capitalize`}
+          className={`text-[35px] leading-[1.2] 800px:text-[60px] text-[yellow] font-[600] capitalize`}
         >
-          Best Collection for <br /> home Decoration
+          Welcome to Papier Factory <br/> Your one-stop shop for all your stationery
+          needs!
         </h1>
-        <p className="pt-5 text-[16px] font-[Poppins] font-[400] text-[#000000ba]">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
-          assumenda? Quisquam itaque <br /> exercitationem labore vel, dolore
-          quidem asperiores, laudantium temporibus soluta optio consequatur{" "}
-          <br /> aliquam deserunt officia. Dolorum saepe nulla provident.
+        <p className="pt-5 text-[16px] font-[Poppins] font-[400] text-[white]">
+        We have a wide selection of products to help you stay organized and
+          productive, including pens, pencils, notebooks, paper, and much more.
+          Whether you're a student, working professional, or simply someone who
+          loves to write, we have the perfect stationery for you. <br /> Shop
+          today and see why we're the best place to buy stationery online!
         </p>
         <Link to="/products" className="inline-block">
             <div className={`${styles.button} mt-5`}>
                  <span className="text-[#fff] font-[Poppins] text-[18px]">
-                    Shop Now
+                    Buy Now
                  </span>
             </div>
         </Link>
