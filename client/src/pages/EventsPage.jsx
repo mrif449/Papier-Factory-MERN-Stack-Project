@@ -1,0 +1,18 @@
+import React from 'react';
+import Header from "../components/Layout/Header";
+import Footer from "../components/Layout/Footer";
+import EventCard from '../components/Events/EventCard';
+const EventsPage = () => {
+  return (
+    <div>
+      <Header activeHeading={4} />
+      <br />
+      <br />
+      <EventCard active={true}/>
+      <EventCard active={true}/>
+      <Footer/>
+    </div>
+  )
+}
+
+export default EventsPage
