@@ -13,7 +13,7 @@ const Hero = () => {
     >
       <div className={`${styles.section} w-[90%] 800px:w-[60%]`}>
         <h1
-          className={`text-[35px] leading-[1.2] 800px:text-[60px] text-[yellow] font-[600] capitalize`}
+          className={`text-[35px] leading-[1.2] 800px:text-[60px] text-[crimson] font-[600] capitalize outline-4 outline-dotted outine-[white]`}  style={{  }}
         >
           Welcome to Papier Factory <br/> Your one-stop shop for all your stationery
           needs!

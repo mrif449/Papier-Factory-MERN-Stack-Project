@@ -18,11 +18,12 @@ const Events = () => {
       <div className="w-full grid">
         <EventCard data={allEvents && allEvents[0]} />
       </div>
-
+     
     </div>
       )
      }
   </div>
   )
 }
+
 export default Events

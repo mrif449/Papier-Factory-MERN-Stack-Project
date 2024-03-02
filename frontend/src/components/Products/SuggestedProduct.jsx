@@ -35,4 +35,5 @@ const SuggestedProduct = ({ data }) => {
     </div>
   );
 };
+
 export default SuggestedProduct;

@@ -5,7 +5,7 @@ import ProductCard from "../ProductCard/ProductCard";
 
 const FeaturedProduct = () => {
   const {allProducts} = useSelector((state) => state.products);
-
+   
   return (
     <div>
       <div className={`${styles.section}`}>
@@ -20,4 +20,5 @@ const FeaturedProduct = () => {
     </div>
   );
 };
+
 export default FeaturedProduct;

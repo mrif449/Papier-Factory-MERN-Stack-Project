@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-const CountDown = ({ data }) => {
+const CountDown = ({data}) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
-
-    return () => clearInterval(timer);
-  }, [calculateTimeLeft]);
+    return () => clearTimeout(timer);
+  });
 
   function calculateTimeLeft() {
     const difference = +new Date(data.Finish_Date) - +new Date();
@@ -23,6 +22,7 @@ const CountDown = ({ data }) => {
         seconds: Math.floor((difference / 1000) % 60),
       };
     }
+
     return timeLeft;
   }
 
@@ -30,8 +30,9 @@ const CountDown = ({ data }) => {
     if (!timeLeft[interval]) {
       return null;
     }
+
     return (
-      <span className="text-[25px] text-[#475ad2]" key={interval}>
+      <span className="text-[25px] text-[#475ad2]">
         {timeLeft[interval]} {interval}{" "}
       </span>
     );

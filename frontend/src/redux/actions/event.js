@@ -34,7 +34,7 @@ export const getAllEventsShop = (id) => async (dispatch) => {
       dispatch({
         type: "getAlleventsShopRequest",
       });
-
+  
       const { data } = await axios.get(
         `${server}/event/get-all-events/${id}`
       );
@@ -56,11 +56,11 @@ export const deleteEvent = (id) => async (dispatch) => {
       dispatch({
         type: "deleteeventRequest",
       })
-
+  
       const {data} = await axios.delete(`${server}/event/delete-shop-event/${id}`,{
         withCredentials: true,
       });
-
+  
       dispatch({
         type: "deleteeventSuccess",
         payload: data.message,

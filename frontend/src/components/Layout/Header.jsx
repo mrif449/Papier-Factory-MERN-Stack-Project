@@ -20,6 +20,9 @@ import { RxCross1 } from "react-icons/rx";
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
+  const { isSeller } = useSelector((state) => state.seller);
+  const { wishlist } = useSelector((state) => state.wishlist);
+  const { cart } = useSelector((state) => state.cart);
   const {allProducts} = useSelector((state) => state.products);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchData, setSearchData] = useState(null);
@@ -56,8 +59,8 @@ const Header = ({ activeHeading }) => {
               <img
                 src={require("../../images/logo.png")}
                 alt=""
-                height={240}
-                width={135}
+                height={280}
+                width={157.5}
               />
             </Link>
           </div>
@@ -78,14 +81,11 @@ const Header = ({ activeHeading }) => {
               <div className="absolute min-h-[30vh] bg-slate-50 shadow-sm-2 z-[9] p-4">
                 {searchData &&
                   searchData.map((i, index) => {
-                    const d = i.name;
-
-                    const Product_name = d.replace(/\s+/g, "-");
                     return (
-                      <Link to={`/product/${Product_name}`}>
+                      <Link to={`/product/${i._id}`}>
                         <div className="w-full flex items-start-py-3">
                           <img
-                            src= {`${backend_url}${i.images[0]}`}
+                            src={`${backend_url}${i.images[0]}`}
                             alt=""
                             className="w-[40px] h-[40px] mr-[10px]"
                           />
@@ -99,9 +99,9 @@ const Header = ({ activeHeading }) => {
           </div>
 
           <div className={`${styles.button}`}>
-            <Link to="/shop-create">
+            <Link to={`${isSeller ? '/dashboard' : '/shop-create'}`}>
               <h1 className="text-[#fff] flex items-center">
-                Be a Seller <IoIosArrowForward className="ml-1" />
+               {isSeller ? "Go Dashboard" : "Become Seller"}  <IoIosArrowForward className="ml-1" />
               </h1>
             </Link>
           </div>
@@ -150,7 +150,7 @@ const Header = ({ activeHeading }) => {
               >
                 <AiOutlineHeart size={30} color="rgb(255 255 255 / 83%)" />
                 <span className="absolute right-0 top-0 rounded-full bg-[blue] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
-                  0
+                  {wishlist && wishlist.length}
                 </span>
               </div>
             </div>
@@ -165,7 +165,7 @@ const Header = ({ activeHeading }) => {
                   color="rgb(255 255 255 / 83%)"
                 />
                 <span className="absolute right-0 top-0 rounded-full bg-[blue] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
-                  1
+                  {cart && cart.length}
                 </span>
               </div>
             </div>
@@ -219,9 +219,9 @@ const Header = ({ activeHeading }) => {
               <img
                 src={require("../../images/logo.png")}
                 alt=""
-                height={240}
-                width={135}
-                className="cursor-pointer"
+                height={280}
+                width={157.5}
+                className="mb-2 cursor-pointer"
               />
             </Link>
           </div>
@@ -229,7 +229,7 @@ const Header = ({ activeHeading }) => {
             <div className="relative mr-[20px]">
               <AiOutlineShoppingCart size={30} />
               <span class="absolute right-0 top-0 rounded-full bg-[blue] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px]  leading-tight text-center">
-                1
+              {cart && cart.length}
               </span>
             </div>
           </div>
@@ -261,7 +261,7 @@ const Header = ({ activeHeading }) => {
                 <input
                   type="search"
                   placeholder="Search Product..."
-                  className="h-[40px] w-full px-2 border-[#ff5349] border-[2px] rounded-md"
+                  className="h-[40px] w-full px-2 border-[crimson] border-[2px] rounded-md"
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
@@ -292,7 +292,7 @@ const Header = ({ activeHeading }) => {
               <div className={`${styles.button} ml-4 !rounded-[4px]`}>
                 <Link to="/shop-create">
                   <h1 className="text-[#fff] flex items-center">
-                    Be a Seller <IoIosArrowForward className="ml-1" />
+                    Become Seller <IoIosArrowForward className="ml-1" />
                   </h1>
                 </Link>
               </div>

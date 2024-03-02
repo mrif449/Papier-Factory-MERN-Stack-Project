@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  AiOutlineCreditCard,
   AiOutlineLogin,
   AiOutlineMessage,
 } from "react-icons/ai";
+import {RiLockPasswordLine} from "react-icons/ri";
 import { HiOutlineReceiptRefund, HiOutlineShoppingBag } from "react-icons/hi";
-import { MdOutlineTrackChanges } from "react-icons/md";
+import { MdOutlinePassword, MdOutlineTrackChanges } from "react-icons/md";
 import { TbAddressBook } from "react-icons/tb";
 import { RxPerson } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
@@ -51,6 +51,16 @@ const ProfileSidebar = ({ setActive, active }) => {
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"
+        onClick={() => setActive(4) || navigate("/inbox")}
+      >
+        <AiOutlineMessage size={20} color={active === 4 ? "red" : ""} />
+        <span className={`pl-3 ${active === 4 ? "text-[red]" : ""} 800px:block hidden`}>
+          Inbox
+        </span>
+      </div>
+
+      <div
+        className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(5)}
       >
         <MdOutlineTrackChanges size={20} color={active === 5 ? "red" : ""} />
@@ -63,13 +73,21 @@ const ProfileSidebar = ({ setActive, active }) => {
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(6)}
       >
-        <AiOutlineCreditCard size={20} color={active === 6 ? "red" : ""} />
+        <RiLockPasswordLine size={20} color={active === 6 ? "red" : ""} />
         <span className={`pl-3 ${active === 6 ? "text-[red]" : ""} 800px:block hidden`}>
-          Payment Methods
+          Change Password
         </span>
       </div>
 
-      
+      <div
+        className="flex items-center cursor-pointer w-full mb-8"
+        onClick={() => setActive(7)}
+      >
+        <TbAddressBook size={20} color={active === 7 ? "red" : ""} />
+        <span className={`pl-3 ${active === 7 ? "text-[red]" : ""} 800px:block hidden`}>
+          Address
+        </span>
+      </div>
 
       <div
         className="single_item flex items-center cursor-pointer w-full mb-8"

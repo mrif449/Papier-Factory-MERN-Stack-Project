@@ -18,4 +18,5 @@ const ShopLoginPage = () => {
     </div>
   )
 }
+
 export default ShopLoginPage
