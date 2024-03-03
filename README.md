@@ -46,28 +46,28 @@ The project structure is organized as follows:
 
 mern-ecommerce/
 │
-├── client/ # Frontend React.js app
-│ ├── public/ # Public assets
-│ └── src/ # React source code
-│ ├── components/ # Reusable React components
-│ ├── pages/ # Individual page components
-│ ├── App.js # Main application component
-│ └── ...
+├── client/        # Frontend React.js app
+│   ├── public/    # Public assets
+│   └── src/       # React source code
+│       ├── components/  # Reusable React components
+│       ├── pages/       # Individual page components
+│       ├── App.js       # Main application component
+│       └── ...
 │
-├── server/ # Backend Node.js app
-│ ├── controllers/ # Controllers for handling requests
-│ ├── models/ # Mongoose models for MongoDB
-│ ├── routes/ # API routes
-│ ├── config/ # Configuration files
-│ ├── middleware/ # Middleware functions
-│ ├── validators/ # Request validation functions
-│ ├── utils/ # Utility functions
-│ ├── app.js # Express application setup
-│ └── ...
+├── server/        # Backend Node.js app
+│   ├── controllers/     # Controllers for handling requests
+│   ├── models/          # Mongoose models for MongoDB
+│   ├── routes/          # API routes
+│   ├── config/          # Configuration files
+│   ├── middleware/      # Middleware functions
+│   ├── validators/      # Request validation functions
+│   ├── utils/           # Utility functions
+│   ├── app.js           # Express application setup
+│   └── ...
 │
-├── .gitignore # Git ignore file
-├── package.json # Server dependencies and scripts
-└── README.md # Project documentation
+├── .gitignore     # Git ignore file
+├── package.json   # Server dependencies and scripts
+└── README.md      # Project documentation
 
 ## Running the Project
 To run the project, follow these steps:
