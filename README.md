@@ -43,7 +43,7 @@ Before running the project, make sure you have the following installed on your s
 
 ## Project Structure
 The project structure is organized as follows:
-
+```
 mern-ecommerce/
 │
 ├── client/        # Frontend React.js app
@@ -68,6 +68,7 @@ mern-ecommerce/
 ├── .gitignore     # Git ignore file
 ├── package.json   # Server dependencies and scripts
 └── README.md      # Project documentation
+```
 
 ## Running the Project
 To run the project, follow these steps:
